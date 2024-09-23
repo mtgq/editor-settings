@@ -1,0 +1,187 @@
+{
+  // editor for myself
+  // 控制是否在 VS Code 内启用工作区信任。
+  "security.workspace.trust.enabled": false,
+  // 启用后，将不会显示扩展建议的通知。
+  "extensions.ignoreRecommendations": true,
+
+  // theme
+  "workbench.iconTheme": "file-icons",
+
+  // ========== Visuals ==========
+  // 控制是否启用平滑插入动画
+  "editor.cursorSmoothCaretAnimation": "on",
+  // 控制是否启用括号对指南
+  "editor.guides.bracketPairs": "active",
+  // 控制行号的显示
+  "editor.lineNumbers": "interval",
+  // 控制编辑器在空白字符上显示符号的方式
+  "editor.renderWhitespace": "boundary",
+  // 控制列表和树是否具有平滑滚动效果
+  "workbench.list.smoothScrolling": true,
+  // 在没有从上一会话中恢复出信息的情况下，控制启动时显示的编辑器
+  "workbench.startupEditor": "newUntitledFile",
+  // 控制树缩进(以像素为单位)
+  "workbench.tree.indent": 10,
+
+  // ========== Editor ========== 
+  // 执行单词相关的导航或操作时作为单词分隔符的字符。
+  "editor.wordSeparators": "`~!@#%^&*()=+[{]}\\|;:'\",.<>/?",
+  // 控制 "查找小部件" 是否应在编辑器顶部添加额外的行。如果为 true, 则可以在 "查找小工具" 可见时滚动到第一行之外。
+  "editor.find.addExtraSpaceOnTop": false,
+  // 保存时为编辑器运行代码操作。必须指定代码操作，并且编辑器不能关闭。示例:“"source.organizeImports": "explicit"”
+  "editor.codeActionsOnSave": {
+      "source.fixAll": "never",
+      "source.fixAll.eslint": "explicit",
+      "source.organizeImports": "never"
+    },
+  // 控制外链打开按键
+  "editor.multiCursorModifier": "ctrlCmd",
+  // 控制资源管理器是否应在通过回收站删除文件时要求确认。
+  "explorer.confirmDelete": false,
+  // 控制资源管理器是否应在通过拖放移动文件或文件夹时要求确认。
+  "explorer.confirmDragAndDrop": false,
+  // 默认行尾字符
+  "files.eol": "\n",
+  // 控制是否在具有未保存更改的编辑器的选项卡上绘制顶部边框。如果未将 `workbench.editor.showTabs` 设置为 multiple，则会忽略此值。
+  "workbench.editor.highlightModifiedTabs": true,
+  // 控制打开的编辑器数是否应受限制。启用后，最近使用较少的编辑器将关闭，以为新打开的编辑器腾出空间。
+  "workbench.editor.limit.enabled": true,
+  // 控制最大打开的编辑器的限制是否应应用于每个编辑器组或所有编辑器组。
+  "workbench.editor.limit.perEditorGroup": true,
+  // 控制打开编辑器的最大数量。使用 `workbench.editor.limit.perEditorGroup` 设置控制每个编辑器组或跨所有组的限制。
+  "workbench.editor.limit.value": 5,
+  // 搜索中排除文件和文件夹
+  "search.exclude": {
+    "**/*.snap": true,
+    "**/*.svg": true,
+    "**/.git": true,
+    "**/.github": false,
+    "**/.nuxt": true,
+    "**/.output": true,
+    "**/.pnpm": true,
+    "**/.vscode": true,
+    "**/.yarn": true,
+    "**/assets": true,
+    "**/bower_components": true,
+    "**/dist/**": true,
+    "**/logs": true,
+    "**/node_modules": true,
+    "**/out/**": true,
+    "**/package-lock.json": true,
+    "**/pnpm-lock.yaml": true,
+    "**/public": true,
+    "**/temp": true,
+    "**/yarn.lock": true,
+    "**/CHANGELOG*": true,
+    "**/LICENSE*": true,
+  },
+
+  // ==========  Global Level Config, needs to put in User Settings ========== 
+  // 控制扩展的自动更新行为。更新是从 Microsoft 联机服务中获取的。
+  "extensions.autoUpdate": "onlyEnabledExtensions",
+
+  // ========== Extension configs ========== 
+  "emmet.showSuggestionsAsSnippets": true,
+  "emmet.triggerExpansionOnTab": false,
+  "errorLens.enabledDiagnosticLevels": [
+    "warning",
+    "error"
+  ],
+  "errorLens.excludeBySource": [
+    "cSpell",
+    "Grammarly",
+    "eslint"
+  ],
+
+  // ESLint config: https://github.com/antfu/eslint-config
+  "eslint.codeAction.showDocumentation": {
+    "enable": true
+  },
+  "eslint.quiet": true,
+
+  // Silent the stylistic rules in you IDE, but still auto fix them
+  "eslint.rules.customizations": [
+    { "rule": "style/*", "severity": "off" },
+    { "rule": "format/*", "severity": "off" },
+    { "rule": "*-indent", "severity": "off" },
+    { "rule": "*-spacing", "severity": "off" },
+    { "rule": "*-spaces", "severity": "off" },
+    { "rule": "*-order", "severity": "off" },
+    { "rule": "*-dangle", "severity": "off" },
+    { "rule": "*-newline", "severity": "off" },
+    { "rule": "*quotes", "severity": "off" },
+    { "rule": "*semi", "severity": "off" }
+  ],
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "vue",
+    "html",
+    "markdown",
+    "json",
+    "jsonc",
+    "yaml",
+    "toml"
+  ],
+
+  // Code Spell Checker
+  "cSpell.allowCompoundWords": true,
+  "cSpell.language": "en,en-US",
+
+  // GitLens — Git supercharged
+  "gitlens.codeLens.authors.enabled": false,
+  "gitlens.codeLens.enabled": false,
+  "gitlens.codeLens.recentChange.enabled": false,
+  "gitlens.menus": {
+    "editor": {
+      "blame": false,
+      "clipboard": true,
+      "compare": true,
+      "history": false,
+      "remote": false
+    },
+    "editorGroup": {
+      "blame": true,
+      "compare": false
+    },
+    "editorTab": {
+      "clipboard": true,
+      "compare": true,
+      "history": true,
+      "remote": true
+    },
+    "explorer": {
+      "clipboard": true,
+      "compare": true,
+      "history": true,
+      "remote": true
+    },
+    "scm": {
+      "authors": true
+    },
+    "scmGroup": {
+      "compare": true,
+      "openClose": true,
+      "stash": true
+    },
+    "scmGroupInline": {
+      "stash": true
+    },
+    "scmItem": {
+      "clipboard": true,
+      "compare": true,
+      "history": true,
+      "remote": false,
+      "stash": true
+    }
+  },
+
+  // I only use Prettier for manually formatting
+  "prettier.enable": false,
+  "prettier.printWidth": 200,
+  "prettier.semi": false,
+  "prettier.singleQuote": true
+}

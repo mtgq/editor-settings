@@ -1,0 +1,17 @@
+// themes & icons
+"file-icons.file-icons",
+
+// life savers!
+"streetsidesoftware.code-spell-checker",
+"dbaeumer.vscode-eslint",
+"Vue.volar",
+"usernamehw.errorlens",
+
+// up to you
+"eamodio.gitlens",
+"EditorConfig.EditorConfig",
+
+// for myself
+"redhat.vscode-yaml",
+"mikestead.dotenv"
+"esbenp.prettier-vscode"
