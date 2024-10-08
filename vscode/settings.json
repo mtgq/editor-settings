@@ -21,6 +21,7 @@
   "editor.renderWhitespace": "boundary",
   // 控制列表和树是否具有平滑滚动效果
   "workbench.list.smoothScrolling": true,
+  "workbench.colorTheme": "Vitesse Dark",
   // 在没有从上一会话中恢复出信息的情况下，控制启动时显示的编辑器
   "workbench.startupEditor": "newUntitledFile",
   // 控制树缩进(以像素为单位)
